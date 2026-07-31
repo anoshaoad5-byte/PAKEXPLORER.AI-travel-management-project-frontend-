@@ -1,0 +1,103 @@
+.itinerary-gen-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.itinerary-gen-hero {
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  color: #fff;
+  border-radius: 16px;
+  padding: 2rem 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.itinerary-gen-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 0.6rem;
+}
+
+.itinerary-gen-hero h1 {
+  margin: 0 0 0.6rem;
+  font-size: 1.7rem;
+}
+
+.itinerary-gen-hero p {
+  margin: 0 0 1.4rem;
+  opacity: 0.95;
+}
+
+.itinerary-gen-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.itinerary-gen-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.itinerary-gen-controls input {
+  width: 90px;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.itinerary-gen-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.itinerary-gen-results h2 {
+  margin-bottom: 1.2rem;
+}
+
+.itinerary-day--detailed {
+  flex-direction: column;
+  border-left: 4px solid #1976d2;
+}
+
+.itinerary-day--detailed .itinerary-day-number {
+  background: #1976d2;
+  align-self: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.itinerary-day-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 0.8rem 0;
+}
+
+.itinerary-slot strong {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  color: #0d47a1;
+}
+
+.itinerary-slot p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.itinerary-day-tip {
+  background: #fff8e1;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #7a5c00;
+  margin-top: 0.5rem;
+}

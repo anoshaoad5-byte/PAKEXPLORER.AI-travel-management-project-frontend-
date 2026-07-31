@@ -1,0 +1,16 @@
+.custom-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.custom-item-row input[type="text"] {
+  flex: 1.4;
+  min-width: 140px;
+}
+
+.custom-item-row input[type="number"] {
+  flex: 1;
+  min-width: 120px;
+}

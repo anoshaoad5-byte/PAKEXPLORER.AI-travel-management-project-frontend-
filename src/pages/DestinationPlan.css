@@ -1,0 +1,245 @@
+.dest-plan-sub {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.dest-plan-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.dest-plan-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dest-plan-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.dest-plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.dest-plan-card li {
+  padding-left: 0.5rem;
+  border-left: 3px solid #eee;
+  color: #333;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .dest-plan-lists {
+    grid-template-columns: 1fr;
+  }
+}
+.dp-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .dp-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dp-map-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.dp-map-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.dp-map-card__header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.dp-map-card__icon {
+  font-size: 1.3rem;
+}
+
+.dp-map-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dp-map {
+  width: 100%;
+  height: 520px;
+}
+
+.dp-sidebar-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.dp-sidebar-card__title {
+  margin: 0 0 0.2rem;
+  font-size: 1.3rem;
+}
+
+.dp-sidebar-card__count {
+  color: #b08a3e;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+}
+
+.dp-sidebar-search {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #e5e0d5;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.dp-sidebar-list {
+  max-height: 460px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.dp-sidebar-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f0ede4;
+  padding: 0.85rem 0.3rem;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.dp-sidebar-list__item:hover,
+.dp-sidebar-list__item.active {
+  background: #faf6ec;
+}
+
+.dp-sidebar-list__tag {
+  font-size: 0.75rem;
+  background: #f0e6cf;
+  color: #7a5c00;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+.dp-no-pins {
+  color: #999;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.dp-pin-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.dp-pin-gallery__img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.dp-pin-modal {
+  max-width: 520px;
+}
+.dp-map-hint {
+  font-size: 0.85rem;
+  color: #888;
+  margin: -0.5rem 0 1rem;
+}
+
+.dp-add-pin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.dp-map-hint {
+  font-size: 0.85rem;
+  color: #888;
+  margin: -0.5rem 0 1rem;
+}
+
+.dp-add-pin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dp-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.dp-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.15s ease;
+}
+
+.dp-checkbox-item:hover {
+  border-color: #1976d2;
+  background: #f5f9ff;
+}
+
+.dp-checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.dp-map-label {
+  background: rgba(10, 26, 51, 0.9);
+  border: none;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.dp-map-label::before {
+  border-top-color: rgba(10, 26, 51, 0.9);
+}

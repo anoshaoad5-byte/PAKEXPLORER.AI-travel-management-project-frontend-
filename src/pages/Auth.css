@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap");
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: "Manrope", sans-serif;
+  background: radial-gradient(120% 100% at 30% 0%, #132848 0%, #0a1a33 60%);
+}
+
+.auth-container .auth-form {
+  width: 100%;
+  max-width: 420px;
+  padding: 2.6rem 2.2rem;
+  border-radius: 20px;
+  background: rgba(19, 40, 72, 0.35) !important;
+  border: 1px solid rgba(244, 237, 224, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+.auth-form h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: #f4ede0;
+  text-align: center;
+  margin: 0 0 1.8rem;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(244, 237, 224, 0.25);
+  background: rgba(244, 237, 224, 0.06);
+  color: #f4ede0;
+  font-size: 0.95rem;
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+}
+
+.auth-form input::placeholder {
+  color: #a9b4c4;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #e3a857;
+  background: rgba(244, 237, 224, 0.1);
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.4rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f0c98a, #e3a857);
+  color: #0a1a33;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.auth-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(227, 168, 87, 0.35);
+}
+
+.auth-form p {
+  text-align: center;
+  color: #a9b4c4;
+  font-size: 0.9rem;
+  margin-top: 1.2rem;
+}
+
+.auth-form a {
+  color: #f0c98a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-form a:hover {
+  color: #e3a857;
+}
+
+.error-text {
+  color: #e08a8a;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}

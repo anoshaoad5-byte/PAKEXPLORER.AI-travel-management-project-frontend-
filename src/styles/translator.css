@@ -1,0 +1,245 @@
+/* ===== Translator page — dedicated stylesheet ===== */
+
+.translator-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.translator-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #101B34;
+  margin-bottom: 28px;
+}
+
+.translator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 18px rgba(16, 27, 52, 0.08);
+}
+
+.translator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.translator-field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #101B34;
+}
+
+.translator-field textarea,
+.translator-field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #D7DCE5;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #101B34;
+  background: #FAFBFC;
+  transition: border-color 0.15s ease;
+  box-sizing: border-box;
+}
+
+.translator-field textarea:focus,
+.translator-field select:focus {
+  outline: none;
+  border-color: #1AA6B7;
+  background: #ffffff;
+}
+
+.translator-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.translator-submit-btn {
+  align-self: flex-start;
+  background: #101B34;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.translator-submit-btn:hover:not(:disabled) {
+  background: #1AA6B7;
+}
+
+.translator-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.translator-error {
+  margin-top: 20px;
+  color: #C62828;
+  font-weight: 500;
+}
+
+.translation-result {
+  margin-top: 28px;
+  padding: 24px;
+  border: 2px solid #E8A33D;
+  border-radius: 16px;
+  background: #FFF8EC;
+  animation: fadeInResult 0.4s ease;
+}
+
+.mascot-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.mascot-bubble {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  animation: mascotPop 0.5s ease;
+}
+
+.mascot-left {
+  animation-delay: 0.1s;
+}
+
+.mascot-right {
+  animation-delay: 0.25s;
+}
+
+.mascot-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.translation-result-header {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.translation-result-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #101B34;
+}
+
+.speak-btn {
+  flex-shrink: 0;
+  background: #E8A33D;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 1.15rem;
+  cursor: pointer;
+  color: #101B34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.speak-btn:hover {
+  transform: scale(1.08);
+}
+
+.speak-btn.speaking {
+  animation: pulseSpeak 1s ease-in-out infinite;
+  box-shadow: 0 0 0 6px rgba(232, 163, 61, 0.25);
+}
+
+.translation-text {
+  color: #101B34;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-top: 18px;
+  word-break: break-word;
+}
+
+.translation-warning {
+  color: #A05A00;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.voice-debug-toggle {
+  margin-top: 28px;
+  background: transparent;
+  border: 1px solid #D7DCE5;
+  color: #5A6472;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.voice-debug-toggle:hover {
+  border-color: #1AA6B7;
+  color: #1AA6B7;
+}
+
+.voice-debug-list {
+  margin-top: 10px;
+  max-height: 220px;
+  overflow-y: auto;
+  background: #F5F7FA;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.voice-debug-list p {
+  font-size: 0.82rem;
+  color: #5A6472;
+  margin: 4px 0;
+}
+
+@keyframes fadeInResult {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseSpeak {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(232, 163, 61, 0.2); }
+  50% { box-shadow: 0 0 0 10px rgba(232, 163, 61, 0.05); }
+}
+
+@keyframes mascotPop {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .mascot-bubble {
+    width: 44px;
+    height: 44px;
+  }
+  .translation-result-header h2 {
+    font-size: 1rem;
+  }
+}

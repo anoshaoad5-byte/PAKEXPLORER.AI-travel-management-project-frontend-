@@ -1,0 +1,19 @@
+.my-trips-btn {
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(244, 237, 224, 0.35);
+  background: transparent;
+  color: #f4ede0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.my-trips-btn:hover {
+  background: linear-gradient(135deg, #f0c98a, #e3a857);
+  color: #0a1a33;
+  border-color: #e3a857;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(227, 168, 87, 0.35);
+}

@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap");
+
+.contact-page {
+  --navy-deep: #0a1a33;
+  --navy: #132848;
+  --gold: #e3a857;
+  --gold-soft: #f0c98a;
+  --teal: #4fa8a8;
+  --cream: #f4ede0;
+  --slate: #a9b4c4;
+
+  font-family: "Manrope", sans-serif;
+  background: var(--navy-deep);
+  color: var(--cream);
+  min-height: 100vh;
+}
+
+.contact-hero {
+  padding: 6rem 6vw 4rem;
+  text-align: center;
+  background: radial-gradient(120% 100% at 50% 0%, var(--navy) 0%, var(--navy-deep) 60%);
+}
+
+.contact-hero__eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.contact-hero__title {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  color: var(--gold-soft);
+  margin: 0 0 1.2rem;
+}
+
+.contact-hero__sub {
+  max-width: 540px;
+  margin: 0 auto;
+  color: var(--slate);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.contact-content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 6vw 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.contact-block h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--cream);
+  margin-bottom: 0.6rem;
+}
+
+.contact-block p {
+  color: var(--slate);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.contact-cta {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  color: var(--navy-deep);
+  text-decoration: none;
+}
+
+.contact-cta--ghost {
+  background: none;
+  border: 1px solid rgba(244, 237, 224, 0.35);
+  color: var(--cream);
+}
+
+.contact-cta--ghost:hover {
+  border-color: var(--gold-soft);
+  color: var(--gold-soft);
+}
+
+.contact-back {
+  display: inline-block;
+  color: var(--gold-soft);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.contact-back:hover {
+  color: var(--gold);
+}
