@@ -47,15 +47,15 @@ function AdminDashboard() {
     try {
       const bookingsUrl =
         activeStatus === 'All'
-          ? 'http://127.0.0.1:5000/api/bookings'
-          : `http://127.0.0.1:5000/api/bookings?status=${activeStatus}`
+          ? 'https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/bookings'
+          : `https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/bookings?status=${activeStatus}`
 
       const [bookingsRes, destRes, hotelRes, transportRes, packageRes] = await Promise.all([
         axios.get(bookingsUrl),
-        axios.get('http://127.0.0.1:5000/api/destinations'),
-        axios.get('http://127.0.0.1:5000/api/hotels'),
-        axios.get('http://127.0.0.1:5000/api/transports'),
-        axios.get('http://127.0.0.1:5000/api/packages')
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/destinations'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/hotels'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/transports'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/packages')
       ])
 
       setBookings(bookingsRes.data)
@@ -89,7 +89,7 @@ function AdminDashboard() {
   const handleApprove = async (id) => {
     setActionId(id)
     try {
-      await axios.put(`http://127.0.0.1:5000/api/bookings/${id}/approve`)
+      await axios.put(`https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/bookings/${id}/approve`)
       loadAll()
     } catch (err) {
       setError('Could not approve booking.')
@@ -101,7 +101,7 @@ function AdminDashboard() {
   const handleReject = async (id) => {
     setActionId(id)
     try {
-      await axios.put(`http://127.0.0.1:5000/api/bookings/${id}/reject`)
+      await axios.put(`https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/bookings/${id}/reject`)
       loadAll()
     } catch (err) {
       setError('Could not reject booking.')
@@ -150,7 +150,7 @@ function AdminDashboard() {
         rating: packageFormData.rating ? parseFloat(packageFormData.rating) : null
       }
 
-      await axios.post('http://127.0.0.1:5000/api/packages', payload)
+      await axios.post('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/packages', payload)
 
       setShowAddPackage(false)
       setPackageFormData(emptyPackageForm)

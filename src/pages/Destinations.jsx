@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useAuth } from '../context/AuthContext'
@@ -16,7 +16,7 @@ function Destinations() {
   useEffect(() => {
     const fetchDestinations = async () => {
       try {
-         const response = await axios.get('http://127.0.0.1:5000/api/destinations')
+         const response = await axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/destinations')
         setDestinations(response.data)
       } catch (err) {
         setError('Could not load destinations')
@@ -109,7 +109,7 @@ function Destinations() {
 
         <div className="page-header-actions">
           <button onClick={() => navigate('/packages')} className="view-packages-btn">
-            🎁 View All Travel Packages
+            ?? View All Travel Packages
           </button>
         </div>
 
@@ -143,7 +143,7 @@ function Destinations() {
       {selected && (
         <div className="modal-overlay" onClick={() => setSelected(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelected(null)}>×</button>
+            <button className="modal-close" onClick={() => setSelected(null)}>�</button>
 
             <div
               className="slideshow"
@@ -159,8 +159,8 @@ function Destinations() {
 
               {getSlides(selected).length > 1 && (
                 <>
-                  <button className="slide-arrow slide-arrow-left" onClick={prevSlide}>‹</button>
-                  <button className="slide-arrow slide-arrow-right" onClick={nextSlide}>›</button>
+                  <button className="slide-arrow slide-arrow-left" onClick={prevSlide}>�</button>
+                  <button className="slide-arrow slide-arrow-right" onClick={nextSlide}>�</button>
 
                   <div className="slide-dots">
                     {getSlides(selected).map((_, i) => (
@@ -183,37 +183,37 @@ function Destinations() {
               <div className="modal-facts">
                 {selected.famous_places && (
                   <div className="fact-item">
-                    <strong>🏛️ Famous Places:</strong>
+                    <strong>??? Famous Places:</strong>
                     <p>{selected.famous_places}</p>
                   </div>
                 )}
                 {selected.festivals && (
                   <div className="fact-item">
-                    <strong>🎉 Festivals:</strong>
+                    <strong>?? Festivals:</strong>
                     <p>{selected.festivals}</p>
                   </div>
                 )}
                 {selected.famous_dish && (
                   <div className="fact-item">
-                    <strong>🍽️ Famous Dish:</strong>
+                    <strong>??? Famous Dish:</strong>
                     <p>{selected.famous_dish}</p>
                   </div>
                 )}
                 {selected.famous_tradition && (
                   <div className="fact-item">
-                    <strong>🎭 Tradition:</strong>
+                    <strong>?? Tradition:</strong>
                     <p>{selected.famous_tradition}</p>
                   </div>
                 )}
                 {selected.fun_fact && (
                   <div className="fact-item">
-                    <strong>💡 Fun Fact:</strong>
+                    <strong>?? Fun Fact:</strong>
                     <p>{selected.fun_fact}</p>
                   </div>
                 )}
                 {selected.best_time_to_visit && (
                   <div className="fact-item">
-                    <strong>📅 Best Time to Visit:</strong>
+                    <strong>?? Best Time to Visit:</strong>
                     <p>{selected.best_time_to_visit}</p>
                   </div>
                 )}
@@ -223,14 +223,14 @@ function Destinations() {
   className="view-packages-btn modal-packages-btn"
   onClick={() => navigate(`/destinations/${selected.id}/plan`)}
 >
-  🗺️ View Plan for {selected.name}
+  ??? View Plan for {selected.name}
 </button>
 <button
   className="view-packages-btn modal-packages-btn"
   style={{ background: '#1976d2', marginTop: '0.6rem' }}
   onClick={() => navigate(`/itinerary/${selected.id}`)}
 >
-  ✨ Generate AI Itinerary
+  ? Generate AI Itinerary
 </button>
             </div>
           </div>

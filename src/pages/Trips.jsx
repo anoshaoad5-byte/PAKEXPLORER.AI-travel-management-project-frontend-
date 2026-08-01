@@ -18,7 +18,7 @@ const STATUS_COLORS = {
   Cancelled: { bg: '#fdecea', text: '#7f1d1d', accent: '#c62828' }
 }
 
-const API_BASE = 'http://127.0.0.1:5000/api'
+const API_BASE = 'https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api'
 
 function Trips() {
   const [trips, setTrips] = useState([])

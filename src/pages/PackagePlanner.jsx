@@ -45,7 +45,7 @@ function PackagePlanner() {
   useEffect(() => {
     const loadPackage = async () => {
       try {
-        const res = await axios.get(`http://127.0.0.1:5000/api/packages/${packageId}`)
+        const res = await axios.get(`https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/packages/${packageId}`)
         setPkg(res.data)
       } catch (err) {
         setError('Could not load this package.')
@@ -84,7 +84,7 @@ function PackagePlanner() {
 
     setSubmitting(true)
     try {
-      await axios.post('http://127.0.0.1:5000/api/bookings', {
+      await axios.post('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/bookings', {
         full_name: fullName,
         email,
         phone,

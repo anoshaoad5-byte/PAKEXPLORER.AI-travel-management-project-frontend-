@@ -27,7 +27,7 @@ function ItineraryGenerator() {
     setItinerary(null)
     try {
       const res = await axios.get(
-        `http://127.0.0.1:5000/api/itinerary/generate?destination_id=${destinationId}&days=${days}`
+        `https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/itinerary/generate?destination_id=${destinationId}&days=${days}`
       )
       setItinerary(res.data)
     } catch (err) {

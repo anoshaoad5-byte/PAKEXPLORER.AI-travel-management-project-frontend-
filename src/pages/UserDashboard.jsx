@@ -48,11 +48,11 @@ function UserDashboard() {
     setError('')
     try {
       const [bookingsRes, destRes, packageRes, hotelRes, transportRes] = await Promise.all([
-        axios.get('http://127.0.0.1:5000/api/bookings'),
-        axios.get('http://127.0.0.1:5000/api/destinations'),
-        axios.get('http://127.0.0.1:5000/api/packages'),
-        axios.get('http://127.0.0.1:5000/api/hotels'),
-        axios.get('http://127.0.0.1:5000/api/transports')
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/bookings'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/destinations'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/packages'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/hotels'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/transports')
       ])
 
       const myEmail = (user?.email || '').toLowerCase()
@@ -97,7 +97,7 @@ function UserDashboard() {
     setSendingTicketId(bookingId)
     setTicketSentId(null)
     try {
-      const res = await axios.post(`http://127.0.0.1:5000/api/bookings/${bookingId}/send-ticket`)
+      const res = await axios.post(`https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/bookings/${bookingId}/send-ticket`)
       if (res.data.email_sent) {
         setTicketSentId(bookingId)
       } else {
@@ -128,7 +128,7 @@ function UserDashboard() {
 
     setCancelingId(booking.id)
     try {
-      await axios.put(`http://127.0.0.1:5000/api/bookings/${booking.id}/cancel`, {
+      await axios.put(`https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/bookings/${booking.id}/cancel`, {
         refund_percentage: percentage
       })
       loadData()

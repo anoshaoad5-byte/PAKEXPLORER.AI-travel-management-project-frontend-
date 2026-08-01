@@ -4,7 +4,7 @@ import NavMenu from "../components/NavMenu";
 import "./LandingPage.css";
 
 // TODO: point this at your existing shared axios instance / API base if you have one
-const API_BASE = "http://127.0.0.1:5000";
+const API_BASE = "https://pakexplorerai-travel-management-project-backend-production.up.railway.app";
 
 const WHATSAPP_NUMBER = "923319042709"; // no +, no spaces, no leading 0
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

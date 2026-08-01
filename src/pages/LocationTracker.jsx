@@ -41,13 +41,13 @@ function LocationTracker() {
 
         try {
           await axios.post(
-            'http://127.0.0.1:5000/location/update',
+            'https://pakexplorerai-travel-management-project-backend-production.up.railway.app/location/update',
             { latitude, longitude },
             authHeaders
           )
 
           const response = await axios.get(
-            'http://127.0.0.1:5000/location/nearby',
+            'https://pakexplorerai-travel-management-project-backend-production.up.railway.app/location/nearby',
             authHeaders
           )
           setNearby(response.data)

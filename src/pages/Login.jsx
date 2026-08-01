@@ -17,7 +17,7 @@ const [showGenderModal, setShowGenderModal] = useState(false)
     setError('')
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/login', {
+      const response = await axios.post('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/login', {
         email,
         password
       })

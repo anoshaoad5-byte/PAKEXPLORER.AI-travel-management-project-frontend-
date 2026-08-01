@@ -19,7 +19,7 @@ function Hotels() {
     setLoading(true)
     setError('')
     try {
-      const response = await axios.get('http://127.0.0.1:5000/api/hotels', {
+      const response = await axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/hotels', {
         params: location ? { location } : {}
       })
       setHotels(response.data)

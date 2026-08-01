@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-const API_BASE = 'http://localhost:5000';
+const API_BASE = 'https://pakexplorerai-travel-management-project-backend-production.up.railway.app';
 
 export default function VedhiWidget() {
   const [isOpen, setIsOpen] = useState(false);

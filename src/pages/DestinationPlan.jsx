@@ -82,7 +82,7 @@ function DestinationPlan() {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.get(`http://127.0.0.1:5000/api/destinations/${id}/pins`)
+      const res = await axios.get(`https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/destinations/${id}/pins`)
       setDestination(res.data.destination)
       setPins(res.data.pins || [])
     } catch (err) {
@@ -142,7 +142,7 @@ function DestinationPlan() {
     try {
       await Promise.all(
         checkedNames.map((name) =>
-          axios.post(`http://127.0.0.1:5000/api/destinations/${id}/pins`, {
+          axios.post(`https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/destinations/${id}/pins`, {
             name,
             category: newPinCategory,
             latitude: newPinPosition.lat,

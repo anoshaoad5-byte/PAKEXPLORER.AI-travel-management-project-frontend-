@@ -38,10 +38,10 @@ function Booking() {
   useEffect(() => {
     const loadOptions = async () => {
       const results = await Promise.allSettled([
-        axios.get('http://127.0.0.1:5000/api/destinations'),
-        axios.get('http://127.0.0.1:5000/api/hotels'),
-        axios.get('http://127.0.0.1:5000/api/transports'),
-        axios.get('http://127.0.0.1:5000/api/packages'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/destinations'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/hotels'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/transports'),
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/packages'),
       ])
 
       const [destRes, hotelRes, transportRes, packageRes] = results
@@ -99,7 +99,7 @@ function Booking() {
     const calculate = async () => {
       setBudgetLoading(true)
       try {
-        const res = await axios.post('http://127.0.0.1:5000/api/budget/calculate', {
+        const res = await axios.post('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/budget/calculate', {
           hotel_id: hotelId || null,
           transport_id: transportId || null,
           destination_id: destinationId || null,
@@ -134,7 +134,7 @@ function Booking() {
 
     setSubmitting(true)
     try {
-      await axios.post('http://127.0.0.1:5000/api/bookings', {
+      await axios.post('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/bookings', {
         full_name: fullName,
         email,
         phone,

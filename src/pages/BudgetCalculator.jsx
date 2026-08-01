@@ -29,9 +29,9 @@ function BudgetCalculator() {
     const loadOptions = async () => {
       try {
         const [hotelsRes, transportsRes, destinationsRes] = await Promise.all([
-          axios.get('http://127.0.0.1:5000/api/hotels'),
-          axios.get('http://127.0.0.1:5000/api/transports'),
-          axios.get('http://127.0.0.1:5000/api/destinations'),
+          axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/hotels'),
+          axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/transports'),
+          axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/destinations'),
         ])
         setHotels(hotelsRes.data)
         setTransports(transportsRes.data)
@@ -78,7 +78,7 @@ function BudgetCalculator() {
 
     setLoading(true)
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/budget/calculate', {
+      const response = await axios.post('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/budget/calculate', {
         hotel_id: hotelId || null,
         transport_id: transportId || null,
         destination_id: destinationId || null,

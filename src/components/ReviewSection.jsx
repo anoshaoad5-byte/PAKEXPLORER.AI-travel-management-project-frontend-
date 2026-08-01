@@ -22,10 +22,10 @@ function ReviewSection({ targetType, targetId }) {
     setError('')
     try {
       const [reviewsRes, summaryRes] = await Promise.all([
-        axios.get('http://127.0.0.1:5000/api/reviews', {
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/reviews', {
           params: { target_type: targetType, target_id: targetId }
         }),
-        axios.get('http://127.0.0.1:5000/api/reviews/summary', {
+        axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/reviews/summary', {
           params: { target_type: targetType, target_id: targetId }
         })
       ])
@@ -69,7 +69,7 @@ function ReviewSection({ targetType, targetId }) {
 
     setSubmitting(true)
     try {
-      await axios.post('http://127.0.0.1:5000/api/reviews', formData, {
+      await axios.post('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/reviews', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'

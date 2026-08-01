@@ -37,7 +37,7 @@ function Reviews() {
       setSelectedId('')
       const cat = CATEGORIES.find((c) => c.type === category)
       try {
-        const response = await axios.get(`http://127.0.0.1:5000${cat.endpoint}`)
+        const response = await axios.get(`https://pakexplorerai-travel-management-project-backend-production.up.railway.app${cat.endpoint}`)
         setItems(response.data)
       } catch (err) {
         setError(`Could not load ${cat.label.toLowerCase()}`)

@@ -28,6 +28,12 @@ function ProtectedRoute({ children }) {
   const { token } = useAuth()
   return token ? children : <Navigate to="/login" />
 }
+function AdminRoute({ children }) {
+  const { token, user } = useAuth()
+  if (!token) return <Navigate to="/login" />
+  if (!user?.is_admin) return <Navigate to="/" />
+  return children
+}
 
 function AppRoutes() {
   return (
@@ -66,7 +72,11 @@ function AppRoutes() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/packages/:packageId/plan" element={<PackagePlanner />} />
       <Route path="/itinerary/:destinationId" element={<ItineraryGenerator />} />
-      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin" element={
+  <AdminRoute>
+    <AdminDashboard />
+  </AdminRoute>
+} />
       <Route path="/our-location" element={<OurLocation />} />
       <Route path="/dashboard" element={
   <ProtectedRoute>

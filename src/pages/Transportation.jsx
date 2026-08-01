@@ -17,7 +17,7 @@ function Transportation() {
 
   const fetchCities = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:5000/api/transports/cities')
+      const response = await axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/transports/cities')
       setCities(response.data)
     } catch (err) {
       // Non-fatal: search still works without suggestions
@@ -31,7 +31,7 @@ function Transportation() {
       const params = {}
       if (from) params.from_city = from
       if (to) params.to_city = to
-      const response = await axios.get('http://127.0.0.1:5000/api/transports', { params })
+      const response = await axios.get('https://pakexplorerai-travel-management-project-backend-production.up.railway.app/api/transports', { params })
       setTransports(response.data)
     } catch (err) {
       setError('Could not load transportation options')
